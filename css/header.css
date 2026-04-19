@@ -1,0 +1,39 @@
+/* 헤더 전체 영역의 배경, 텍스트 색상, 정렬, 여백 등 */
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1em 0;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 헤더 내부 컨트롤(언어/테마 스위치 등)의 flex 중앙 정렬 */
+.header-controls-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 언어 전환 네비게이션의 폰트, 여백 등 */
+.lang-switch {
+    position: static;
+    font-size: 1rem;
+    margin-top: 0.2em;
+}
+
+/* 언어 전환 링크의 색상, 굵기, 밑줄 제거 등 */
+.lang-switch a {
+    color: var(--header-text);
+    text-decoration: none;
+    margin: 0 0.125rem;
+    /* 2px를 rem 단위로 변경 */
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+/* 언어 전환 링크에 마우스 오버 시 색상 강조 */
+.lang-switch a:hover {
+    color: var(--button-hover-border);
+}

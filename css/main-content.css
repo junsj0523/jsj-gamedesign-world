@@ -1,0 +1,397 @@
+/* main-content.css: 본문(컨테이너, 섹션, 게임, 미니게임, 연혁, 연락처, 푸터) 관련 CSS를 통합한 파일 */
+
+/* ===== 전체 테마 ===== */
+/* 전체 페이지의 기본 폰트, 배경, 텍스트 색상 등 전역 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--page-bg);
+    color: var(--page-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== 컨테이너 및 섹션 ===== */
+/* 본문 영역의 최대 너비, 가운데 정렬, 배경 등 레이아웃 컨테이너 */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 2vw;
+    background-color: var(--container-bg);
+    transition: background-color 0.3s ease;
+}
+
+/* 각 주요 구역(소개, 활동 등)의 구분 및 하단 여백, 구분선 */
+.section {
+    margin-bottom: 2vw;
+    padding-bottom: 2vw;
+    border-bottom: 1px solid var(--section-border);
+    transition: border-color 0.3s ease;
+}
+
+/* 섹션 제목의 색상, 하단 테두리, 여백 등 스타일 */
+.section h2 {
+    color: var(--section-title-text);
+    border-bottom: 0.2vw solid var(--section-title-border);
+    padding-bottom: 1vw;
+    margin-bottom: 2vw;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ===== 게임 플레이 버튼 및 미니게임 ===== */
+/* 게임 플레이 버튼 영역의 중앙 정렬 및 여백 */
+.game-play-button-container {
+    text-align: center;
+    margin: 3vw 0;
+}
+
+/* 게임 플레이 버튼(이미지 링크)의 크기, 정렬 */
+.game-play-button {
+    display: block;
+    width: 100%;
+    max-width: 50vw;
+    min-width: 20vw;
+    margin: 0 auto;
+}
+
+/* 게임 플레이 버튼 이미지의 크기, 테두리, 마우스 오버 효과 */
+.game-play-button img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border: 0.3vw solid transparent;
+    border-radius: 1vw;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    box-sizing: border-box;
+    display: block;
+}
+
+/* 게임 플레이 버튼 이미지에 마우스 오버 시 확대, 그림자, 테두리 강조 */
+.game-play-button img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--button-hover-shadow);
+    border-color: var(--button-hover-border);
+}
+
+/* ===== 미니게임 리스트 구조화 ===== */
+/* 기존 카드형 레이아웃은 사용하지 않으며 대신 수직 리스트 사용 */
+/* 
+.minigame-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2vw 0;
+    justify-content: center;
+}
+
+.minigame-card {
+    flex: 1 1 250px;
+    max-width: 320px;
+    background: var(--card-bg);
+    border: 0.1vw solid var(--card-border);
+    border-radius: 0.8vw;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.04); /* 2px 8px를 rem 단위로 변경 */
+/*  padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background 0.3s, border-color 0.3s;
+}
+*/
+
+.minigame-card figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.minigame-card img {
+    max-width: 100%;
+    border-radius: 0.5vw;
+    border: 0.1vw solid var(--card-image-border);
+    margin-bottom: 0.8vw;
+    transition: border-color 0.3s;
+}
+
+.minigame-card figcaption {
+    font-size: 1.05em;
+    color: var(--card-title-text);
+    text-align: center;
+    margin-top: 0.2vw;
+}
+
+/* 새로운 수직 미니게임 리스트 스타일 */
+.minigame-list-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    margin: 2vw 0;
+}
+
+.minigame-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding-bottom: 2vw;
+    border-bottom: 1px solid var(--section-border);
+}
+
+/* 중간 화면 이상에서는 이미지와 내용을 가로로 배치 */
+@media (min-width: 48rem) {
+
+    /* 768px를 48rem으로 변경 */
+    .minigame-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .minigame-item img {
+        width: 40%;
+        max-width: 40%;
+        /* 450px를 50%로 변경 */
+        object-fit: cover;
+    }
+
+    .minigame-content {
+        flex: 1;
+        margin-left: 2vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 12rem;
+        /* 200px를 12rem으로 변경 - 글꼴 크기 기준으로 상대적인 값 */
+    }
+}
+
+/* 작은 화면에서는 수직으로 배치 */
+.minigame-item img {
+    border-radius: 0.5vw;
+    border: 0.1vw solid var(--card-image-border);
+    max-width: 100%;
+    height: auto;
+}
+
+.minigame-content h3 {
+    margin-top: 0;
+    color: var(--section-title-text);
+}
+
+.minigame-content p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* 미니게임 섹션은 중앙 정렬 해제, 좌측 정렬로 변경 */
+.minigames-section {
+    text-align: left;
+}
+
+/* 미니게임 섹션 제목만 중앙 정렬 유지 */
+.minigames-section h2 {
+    text-align: center;
+}
+
+/* 미니게임 섹션의 소개 텍스트는 중앙 정렬 */
+.minigames-section>p {
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+/* ===== 연혁(History) ===== */
+/* 연혁 섹션의 리스트 마커(사각형), 들여쓰기 */
+#history ul {
+    list-style-type: square;
+    padding-left: 2vw;
+}
+
+/* ===== 연락처(Contact) ===== */
+/* 연락처 섹션의 문단 줄 간격 */
+#contact p {
+    line-height: 1.8;
+}
+
+/* 연락처 링크의 색상, 밑줄 제거, 전환 효과 */
+#contact a {
+    color: var(--link-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* 연락처 링크에 마우스 오버 시 밑줄 표시 */
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* ===== 푸터(Footer) ===== */
+/* 푸터 영역의 중앙 정렬, 배경색, 텍스트 색상, 여백 */
+footer {
+    text-align: center;
+    padding: 2vw;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    margin-top: 3vw;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== 유틸리티 클래스 ===== */
+/* 경고, 주의 등 강조 텍스트(빨간색) */
+.text-danger {
+    color: #d00 !important;
+}
+
+/* 약간 크게 표시할 텍스트 */
+.text-large {
+    font-size: 1.1em !important;
+}
+
+/* ===== 이미지 슬라이더 스타일 ===== */
+.image-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.5vw;
+    border: 0.1vw solid var(--card-image-border);
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+    /* 4:3 비율로 변경 (75%)하여 모바일에서 더 잘 보이게 함 */
+    background-color: #000;
+}
+
+.slider-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* contain으로 설정하여 이미지 비율 유지 및 잘리지 않게 함 */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border: none;
+    max-height: 100%;
+    /* 최대 높이 제한 */
+}
+
+.slider-container img.active {
+    opacity: 1;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-nav:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slider-nav.prev {
+    left: 0.5rem;
+}
+
+.slider-nav.next {
+    right: 0.5rem;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    z-index: 2;
+}
+
+.slider-dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-dot.active {
+    background-color: white;
+}
+
+/* 중간 화면 이상에서는 이미지 슬라이더와 내용을 가로로 배치 */
+@media (min-width: 48rem) {
+    .minigame-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .image-slider {
+        width: 40%;
+    }
+
+    .slider-container {
+        padding-bottom: 56.25%;
+        /* 더 큰 화면에서는 16:9 비율로 되돌림 */
+    }
+
+    .minigame-content {
+        flex: 1;
+        margin-left: 2vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 12rem;
+    }
+}
+
+/* 작은 화면에서 슬라이더 네비게이션 버튼 크기 조정 */
+@media (max-width: 48rem) {
+    .slider-nav {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.9rem;
+    }
+
+    .slider-nav.prev {
+        left: 0.3rem;
+    }
+
+    .slider-nav.next {
+        right: 0.3rem;
+    }
+
+    .slider-dots {
+        bottom: 0.3rem;
+    }
+}
+
+/* 매우 작은 화면에서 추가 최적화 */
+@media (max-width: 30rem) {
+    .slider-container {
+        padding-bottom: 80%;
+        /* 더 작은 화면에서는 비율을 더 높게 설정 */
+    }
+}
