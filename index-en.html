@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This is the official website for Potanity, the game development club at Kangwon National University, where we grow together through creative and fun projects.">
+    <title>Potanity - Kangwon National University Game Development Club</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main-content.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+
+<body>
+    <header>
+        <h1>Potanity</h1>
+        <div class="header-controls-center">
+            <nav class="lang-switch" aria-label="Language Switch">
+                <a href="index.html">한국어</a> | <a href="index-en.html">English</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" role="main">
+        <section id="introduction" class="section">
+            <h2>About Us</h2>
+            <strong>Kangwon National University Game Development Club Potanity</strong><br>
+            <span class="text-large">POTATO + UNITY</span>
+            <p>Potanity is a central game development club at Kangwon National University,<br>
+                where students from various fields such as game planning, programming, graphics, and sound gather<br>
+                to create creative and innovative games together.<br><br>
+                We enhance our skills through Unity-based projects,<br>
+                regular study sessions, monthly meetings, planning studies, participation in game exhibitions, game
+                jams, and other activities.<br>
+                Anyone with a passion for game development is welcome!</p>
+        </section>
+
+        <section id="regular-activities" class="section">
+            <h2>Regular Activities</h2>
+            <ul>
+                <li><strong>⏰ Regular Activity Time:</strong> Weekdays 6 PM - 9 PM</li>
+                <li><strong>📚 Regular Study & Monthly Pizza Day Meeting:</strong> Mondays, Tuesdays, Thursdays</li>
+                <li><strong>🤝 Autonomous Gathering:</strong> Wednesdays, Fridays</li>
+                <li><strong>💡 Other Activities:</strong>
+                    <ul>
+                        <li>📝 Planning Study</li>
+                        <li>🎮 Mini-game development practice after study, team projects, mid-scale projects during
+                            vacation</li>
+                        <li>🕹️ Game exhibition visits, game show attendance, in-club game jams</li>
+                        <li>🍕 <b>Pizza Day</b> every <strong>first Wednesday</strong> and <strong>third Friday</strong>
+                            of
+                            the month!</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="game-play" class="section game-play-button-container">
+            <h2>Play Games</h2>
+            <p>Click the button below to instantly enjoy our games in your web browser!</p>
+            <a href="game/index.html" class="game-play-button" id="game-play-link" target="_blank">
+                <img src="images/game-play-button.png" alt="Start Game Button Image">
+            </a>
+        </section>
+
+        <section id="minigames" class="section minigames-section">
+            <h2>Potanity Mini-Game Showcase</h2>
+            <p>Check out the mini-games developed by Potanity!</p>
+            <div class="minigame-list-vertical">
+                <div class="minigame-item">
+                    <div class="image-slider">
+                        <div class="slider-container">
+                            <img src="images/minigame1-1.png" alt="Mini-game 1: Metal Slug Image 1" class="active">
+                            <img src="images/minigame1-2.png" alt="Mini-game 1: Metal Slug Image 2">
+                            <img src="images/minigame1-3.png" alt="Mini-game 1: Metal Slug Image 3">
+                        </div>
+                        <button class="slider-nav prev" aria-label="Previous Image">&lt;</button>
+                        <button class="slider-nav next" aria-label="Next Image">&gt;</button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="minigame-content">
+                        <h3>Mini-game 1: Metal Slug</h3>
+                        <p>An action shooting game that pays homage to the classic Metal Slug. Clear various weapons
+                            and stages while defeating enemies!</p>
+                    </div>
+                </div>
+                <div class="minigame-item">
+                    <div class="image-slider">
+                        <div class="slider-container">
+                            <img src="images/minigame2-1.png" alt="Mini-game 2: Reaction Speed Test Game Image 1"
+                                class="active">
+                            <img src="images/minigame2-2.png" alt="Mini-game 2: Reaction Speed Test Game Image 2">
+                        </div>
+                        <button class="slider-nav prev" aria-label="Previous Image">&lt;</button>
+                        <button class="slider-nav next" aria-label="Next Image">&gt;</button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="minigame-content">
+                        <h3>Mini-game 2: Reaction Speed Test Game</h3>
+                        <p>Measure your reaction speed by clicking as quickly as possible when a signal appears on
+                            the screen! Challenge your reflexes.</p>
+                    </div>
+                </div>
+                <div class="minigame-item">
+                    <div class="image-slider">
+                        <div class="slider-container">
+                            <img src="images/minigame3-1.png" alt="Mini-game 3: Watermelon Game Image 1" class="active">
+                            <img src="images/minigame3-2.png" alt="Mini-game 3: Watermelon Game Image 2">
+                        </div>
+                        <button class="slider-nav prev" aria-label="Previous Image">&lt;</button>
+                        <button class="slider-nav next" aria-label="Next Image">&gt;</button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="minigame-content">
+                        <h3>Mini-game 3: Watermelon Game <span class="text-danger">(Under Development)</span></h3>
+                        <p>A puzzle game where you stack fruits to create a watermelon! Strategically stack fruits to
+                            challenge the highest score.</p>
+                    </div>
+                </div>
+                <div class="minigame-item">
+                    <div class="image-slider">
+                        <div class="slider-container">
+                            <img src="images/minigame4-1.png" alt="Mini-game 4: Pico Park Image 1" class="active">
+                            <img src="images/minigame4-2.png" alt="Mini-game 4: Pico Park Image 2">
+                        </div>
+                        <button class="slider-nav prev" aria-label="Previous Image">&lt;</button>
+                        <button class="slider-nav next" aria-label="Next Image">&gt;</button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="minigame-content">
+                        <h3>Mini-game 4: Pico Park <span class="text-danger">(Under Development)</span></h3>
+                        <p>A multiplayer puzzle game where cooperation is key! Work with friends to clear stages.</p>
+                    </div>
+                </div>
+                <div class="minigame-item">
+                    <div class="image-slider">
+                        <div class="slider-container">
+                            <img src="images/minigame5-1.png" alt="Mini-game 5: Motion Recognition Game Image 1"
+                                class="active">
+                            <img src="images/minigame5-2.png" alt="Mini-game 5: Motion Recognition Game Image 2">
+                        </div>
+                        <button class="slider-nav prev" aria-label="Previous Image">&lt;</button>
+                        <button class="slider-nav next" aria-label="Next Image">&gt;</button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="minigame-content">
+                        <h3>Mini-game 5: Motion Recognition <span class="text-danger">(Under Development)</span></h3>
+                        <p>A motion recognition game using a webcam! Move your body to complete various missions.</p>
+                    </div>
+                </div>
+                <div class="minigame-item">
+                    <div class="image-slider">
+                        <div class="slider-container">
+                            <img src="images/minigame6-1.png" alt="Mini-game 6: Sorting Game Image 1" class="active">
+                            <img src="images/minigame6-2.png" alt="Mini-game 6: Sorting Game Image 2">
+                        </div>
+                        <button class="slider-nav prev" aria-label="Previous Image">&lt;</button>
+                        <button class="slider-nav next" aria-label="Next Image">&gt;</button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="minigame-content">
+                        <h3>Mini-game 6: Sorting Game <span class="text-danger">(Under Development)</span></h3>
+                        <p>A game where you quickly sort given objects into the correct categories! Test your speed and
+                            concentration.</p>
+                    </div>
+                </div>
+                <div class="minigame-item">
+                    <div class="image-slider">
+                        <div class="slider-container">
+                            <img src="images/minigame7-1.png" alt="Mini-game 7: Desert Survivor Image 1" class="active">
+                            <img src="images/minigame7-2.png" alt="Mini-game 7: Desert Survivor Image 2">
+                        </div>
+                        <button class="slider-nav prev" aria-label="Previous Image">&lt;</button>
+                        <button class="slider-nav next" aria-label="Next Image">&gt;</button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="minigame-content">
+                        <h3>Mini-game 7: Desert Survivor <span class="text-danger">(Under Development)</span></h3>
+                        <p>A survival game where you survive in a hot desert! Manage limited resources and survive as
+                            long as possible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="history" class="section">
+            <h2>Club History</h2>
+            <ul>
+                <li><strong>Summer Vacation 2024:</strong> Potanity Club established</li>
+                <li><strong>Fall Semester 2024:</strong> Study sessions within the club</li>
+                <li><strong>Winter Vacation 2024:</strong> Metal Slug game production</li>
+                <li><strong>Spring Semester 2025:</strong>
+                    <ul>
+                        <li>Regular activities started</li>
+                        <li>Study sessions in progress</li>
+                        <li>Other mini-game production</li>
+                        <li>Participation in school events and game demonstrations</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>For inquiries about Potanity, membership, or collaboration proposals, please contact us below.</p>
+            <p>
+                <strong>Membership and Other Inquiries:</strong>
+                <a href="https://open.kakao.com/o/sds7asbg" target="_blank">open.kakao.com/o/sds7asbg</a>
+            </p>
+            <p>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/KNU-Potanity" target="_blank">github.com/KNU-Potanity</a>
+            </p>
+            <p>
+                <strong>
+                    Official Website:
+                    <a href="https://knu-potanity.github.io/website/"
+                        target="_blank">knu-potanity.github.io/website/</a>
+                </strong>
+            </p>
+            <p><strong>Club Room:</strong> Hanul Hall, Kangwon National University</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Potanity. All Rights Reserved.</p>
+    </footer>
+
+    <div id="universal-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <div id="universal-modal-message"></div>
+            <div class="modal-actions">
+                <button id="universal-modal-cancel" type="button">Close</button>
+                <button id="universal-modal-continue" type="button" style="display:none;"></button>
+            </div>
+        </div>
+    </div>
+
+    <template id="webgpu-not-supported-template">
+        <strong>WebGPU Not Supported</strong>
+        <div class="webgpu-warning-alert">WebGPU is not supported in your current browser!</div>
+        <div>This game is made using the latest graphics technology, <b>WebGPU</b>. A WebGPU-supported environment is
+            required for smooth gameplay.<br>
+            <b>Recommended Browsers and Environments (as of early 2025):</b>
+            <ul>
+                <li><b>Desktop:</b>
+                    <ul>
+                        <li>Chrome (version 113 or higher): Windows, macOS, ChromeOS, Linux</li>
+                        <li>Edge (version 113 or higher): Windows, macOS, Linux</li>
+                        <li>Firefox (Nightly build or version 141 or higher planned, currently requires flag
+                            activation)</li>
+                        <li>Safari (Technology Preview of the latest macOS version or enable developer menu/feature
+                            flags in the official Safari version)</li>
+                        <li>Opera (version 100 or higher)</li>
+                    </ul>
+                </li>
+
+                <li><b>Mobile:</b>
+                    <ul>
+                        <li>Chrome for Android (version 121/123 or higher)</li>
+                        <li>Safari on iOS (iOS 18 beta or higher, requires feature flag activation in settings)</li>
+                        <li>Samsung Internet (version 25 or higher)</li>
+                        <li>Opera Mobile (version 80 or higher)</li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="https://caniuse.com/webgpu" target="_blank" rel="noopener">Check WebGPU browser compatibility
+                (caniuse.com) directly</a><br>
+            <b>Play in WebGL mode or change your browser.</b>
+        </div>
+        <span class="text-danger">(The game may not run properly or some features may be limited.)</span>
+    </template>
+
+    <template id="webgpu-no-adapter-template">
+        <strong>WebGPU Hardware Acceleration Notice</strong>
+        <div class="webgpu-warning-alert">A graphics adapter (GPU) that supports WebGPU could not be found.</div>
+        <div>Hardware acceleration may be turned off, the driver may be outdated, or it may be a virtual machine/remote
+            environment.<br><span class="text-danger">If hardware acceleration is turned off, game performance may be
+                severely degraded or it may not be possible to run.</span><br><br>
+            <b>How to enable hardware acceleration:</b> Search for "Use hardware acceleration" in your browser settings
+            and enable it.<br>
+            (Example: Chrome - Settings > System > Use hardware acceleration when available)<br>
+            <span class="text-danger">※ This warning may continue to appear in the Firefox browser regardless of the
+                hardware acceleration status.</span>
+        </div>
+    </template>
+
+    <template id="webgl-no-hwaccel-template">
+        <strong>WebGL Hardware Acceleration Notice</strong>
+        <div class="webgpu-warning-alert">Hardware acceleration is disabled in the WebGL environment.</div>
+        <div><span class="text-danger">If hardware acceleration is turned off, game performance may be severely
+                degraded or it may not be possible to run.</span><br><br>
+            <b>How to enable hardware acceleration:</b> Search for "Use hardware acceleration" in your browser settings
+            and enable it.<br>
+            (Example: Chrome - Settings > System > Use hardware acceleration when available)<br>
+            <span class="text-danger">※ This warning may continue to appear in the Firefox browser regardless of the
+                hardware acceleration status.</span>
+        </div>
+    </template>
+
+    <script src="js/theme.js"></script>
+    <script src="js/browser-check.js"></script>
+    <script src="js/image-slider.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
