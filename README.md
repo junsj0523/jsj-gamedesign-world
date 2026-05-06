@@ -1,4 +1,4 @@
-# 포테니티
+<!-- # 포테니티
 
 ## 동아리 소개
 
@@ -67,4 +67,4 @@ Unity를 활용한 프로젝트와 정기 스터디, 정기 모임, 기획 스�
 *   **가입, 기타 문의 연락처:** [open.kakao.com/o/sds7asbg](https://open.kakao.com/o/sds7asbg)
 *   **GitHub:** [github.com/KNU-Potanity](https://github.com/KNU-Potanity)
 *   **동아리방:** 강원대학교 한울관
-*   **공식 웹사이트** [knu-potanity.github.io/website/](https://knu-potanity.github.io/website/)
+*   **공식 웹사이트** [knu-potanity.github.io/website/](https://knu-potanity.github.io/website/) -->
