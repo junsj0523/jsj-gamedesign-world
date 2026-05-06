@@ -455,3 +455,28 @@ footer {
     color: var(--page-text);
     opacity: 0.8; /* 설명을 약간 흐리게 하여 제목 강조 */
 }
+/* 직접 출시한 게임 영역만 특별 관리 */
+.game-gallery.my-release {
+    display: flex;         /* 한 줄을 다 채우지 않도록 설정 */
+    justify-content: flex-start; /* 왼쪽 정렬 */
+}
+
+.game-gallery.my-release .game-item {
+    max-width: 320px;      /* ⭐ 카드가 혼자 있어도 늘어나지 않게 너비 제한 */
+    flex: 0 1 320px;       /* 고정된 너비감 유지 */
+}
+
+/* 해당 영역의 이미지 비율 강제 고정 */
+.game-gallery.my-release .game-item img {
+    height: auto;
+    aspect-ratio: 16 / 9;  /* 스팀 규격에 맞는 16:9 비율 */
+    object-fit: cover;
+}
+
+/* 모바일에서는 다시 화면 너비에 맞춤 */
+@media (max-width: 48rem) {
+    .game-gallery.my-release .game-item {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+}
